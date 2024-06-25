@@ -1,0 +1,19 @@
+version: '2'
+services:
+  web:
+    platform: linux/amd64
+    build: .
+    network_mode: "bridge"
+    links:
+      - "mysql"
+    ports:
+      - "8080:80"  # access localhost:8080
+  mysql:
+    platform: linux/amd64
+    image: mysql:8.0.19
+    network_mode: "bridge"
+    volumes:
+      - ./mysql_time_based.sql:/docker-entrypoint-initdb.d/mysql_time_based.sql:ro
+    environment: 
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=mysql_time_based
