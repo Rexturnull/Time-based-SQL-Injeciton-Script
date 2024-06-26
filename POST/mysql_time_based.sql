@@ -54,7 +54,7 @@ CREATE TABLE `flags` (
 
 LOCK TABLES `flags` WRITE;
 /*!40000 ALTER TABLE `flags` DISABLE KEYS */;
-INSERT INTO `flags` VALUES (1,'Oops, not here'),(2,'CTF{un10n_5ql_1nj3c710n_15_345y}');
+INSERT INTO `flags` VALUES (1,'Oops,not here'),(2,'FLAG{t1m3_6@s3d_5ql_1nj3c710n}');
 /*!40000 ALTER TABLE `flags` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
