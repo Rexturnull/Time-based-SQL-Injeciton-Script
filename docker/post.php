@@ -46,7 +46,10 @@
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="/">Account</a></li>
+              <li class="active"><a href="/">Time Based SQLi</a></li>
+              <li class="active"><a href="/post.php">post</a></li>
+              <li class="active"><a href="/get.php">get</a></li>
+            </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
       </div><!-- /.navbar -->
@@ -60,7 +63,7 @@
       if($username == ""){
            $result_post = fetch_account();
       }else{
-           $result_post = fetch_post($username);
+           $result_post = fetch_user($username);
       }
 
     }
@@ -69,7 +72,7 @@
       <div class="row center-form">
             <div class="col-md-4">
                 <h3>Search Account</h3>
-                <form action="/" method="POST">
+                <form action="/post.php" method="POST">
                     <div class="form-group">
                         <label for="Username">Username:</label>
                         <input type="text" class="form-control" id="Username" name="Username">
